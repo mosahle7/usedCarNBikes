@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
 
 import Header from "../Header/Header"
-// import Footer from "../Footer"
+import Footer from "../Footer/Footer"
+// import Routers from "../../routers/UserRouters";
 
 
 const Layout = () => {
@@ -10,8 +11,9 @@ const Layout = () => {
         <Header />
         <div>
           {/* <Routers /> */}
+          <h1>hi</h1>
         </div>
-        {/* <Footer /> */}
+        <Footer />
       </Fragment>
     );
   };

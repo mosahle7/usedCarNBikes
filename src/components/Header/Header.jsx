@@ -14,6 +14,10 @@ const navLinks = [
     display: "About",
   },
   {
+    path: "/user/bikes",
+    display: "Bikes",
+  },
+  {
     path: "/user/cars",
     display: "Cars",
   },
@@ -75,7 +79,7 @@ const Header = () => {
                   <Link to="/home" className="header_logo d-flex align-items-center gap-2">
                     <i class="ri-car-line"></i>
                     <span>
-                      Rent Car <br /> Service
+                      Used Cars <br /> &Bikes
                     </span>
                   </Link>
                 </h1>
@@ -89,7 +93,7 @@ const Header = () => {
                 </span>
                 <div className="header__location-content d-none d-lg-block">
                   <h4>India</h4>
-                  <h6>Bangalore, India</h6>
+                  <h6>Kerala, India</h6>
                 </div>
               </div>
             </Col>
@@ -149,7 +153,7 @@ const Header = () => {
 
             <div className="nav__right">
               <div className="search__box">
-                <input type="text" placeholder="Search" />
+                <input type="text" placeholder="Search for Cars or Bikes, Eg:XUV700" />
                 <span>
                   <i class="ri-search-line"></i>
                 </span>
