@@ -1,18 +1,33 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./components/Layouts/userLayout"
+import {
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
+
+import Layout from "./components/userLayout"
+import Login from "./components/Login";
+import { AuthContextProvider } from "./context/AuthContext";
 
 import './App.css';
 
 const App = () => {
 
   return (
-    <Router>
+    <>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />} />
+        <Route 
+        path="/" 
+        element={
+        <AuthContextProvider>
+          <Layout/> </AuthContextProvider>}>
         <Route path="/user/" element={<Layout />} />
+        </Route>
+        <Route path ='login' element={<AuthContextProvider> <Login/> </AuthContextProvider>}/>
       </Routes>
-    </Router>
+    </BrowserRouter>
+    </>
   );
 };
 

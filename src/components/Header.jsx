@@ -1,8 +1,9 @@
 import React, { useRef } from "react";
-
+import { useState } from 'react';
 import { Container, Row, Col } from "reactstrap";
 import { Link, NavLink } from "react-router-dom";
-import "../../styles/header.css";
+import { useAuth } from "../context/AuthContext"
+import "../styles/header.css";
 
 const navLinks = [
   {
@@ -32,6 +33,7 @@ const navLinks = [
 
 const Header = () => {
   const menuRef = useRef(null);
+  const {logged, logout} = useAuth();
 
   const toggleMenu = () => menuRef.current.classList.toggle("menu__active");
 
@@ -49,18 +51,28 @@ const Header = () => {
                 </span>
               </div>
             </Col>
-
-            <Col lg="6" md="6" sm="6">
+   
+            {/* <Col lg="6" md="6" sm="6">
               <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
-                <Link to="/Login" className=" d-flex align-items-center gap-1">
+                <Link to="/login" className=" d-flex align-items-center gap-1">
                   <i class="ri-login-circle-line"></i> Login
                 </Link>
 
-                <Link to="/Signup" className=" d-flex align-items-center gap-1">
+                <Link to="/signup" className=" d-flex align-items-center gap-1">
                   <i class="ri-user-line"></i> Register
                 </Link>
               </div>
-            </Col>
+            </Col> */}
+            {logged? (
+      <div id='logout'>
+      <Link to='/login' onClick={logout}>
+        Logout</Link>
+    </div>):
+      (<div id='login'>
+      <Link to='/login' >
+        Login/SignUp</Link>
+    </div>)
+      }
           </Row>
         </Container>
       </div>
