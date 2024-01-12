@@ -151,7 +151,8 @@ const Login = () => {
           </New>
           
           <Inputs>
-          {action === 'Login' ? <div></div> : <Input>
+          {action === 'Login' ? <div></div> : 
+          <Input>
           <img src="assets/person.png" alt="" />
           <Inp type="name" name='name'placeholder='Name' onChange={handleChange} onBlur={handleBlur} invalid={showError('name')} required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"/>
           {/* {showError('name') &&(
@@ -267,6 +268,8 @@ const Login = () => {
     & img{
       margin: 0px 30px;
       margin-left: 12px;
+      height: 20px;
+      width: 21px;
     }
     `
   const vibrationAnimation = keyframes`
