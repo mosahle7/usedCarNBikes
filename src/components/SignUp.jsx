@@ -265,9 +265,11 @@ const SignUp = () => {
     border-radius: 6px;
     padding-top:30px;
     & img{
-      margin: 0px 30px;
-      margin-left: 12px;
-    }
+        margin: 0px 30px;
+        margin-left: 12px;
+        height: 20px;
+        width: 21px;
+      }
     `
   const vibrationAnimation = keyframes`
     0% { transform: translateX(0); }
