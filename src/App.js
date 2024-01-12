@@ -7,6 +7,7 @@ import {
 
 import Layout from "./components/userLayout"
 import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 import { AuthContextProvider } from "./context/AuthContext";
 
 import './App.css';
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/user/" element={<Layout />} />
         </Route>
         <Route path ='login' element={<AuthContextProvider> <Login/> </AuthContextProvider>}/>
+        <Route path ='signup' element={<AuthContextProvider> <SignUp/> </AuthContextProvider>}/>
       </Routes>
     </BrowserRouter>
     </>

@@ -67,16 +67,28 @@ const Header = () => {
                 </Link>
               </div>
             </Col> */}
-            {logged? (
-      <div id='logout'>
-      <Link to='/login' onClick={logout}>
-        Logout</Link>
-    </div>):
-      (<div id='login'>
-      <Link to='/login' >
-        Login/SignUp</Link>
-    </div>)
+            
+      {logged? 
+        <Col lg="6" md="6" sm="6">
+        <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
+          <Link to="/login" onClick={logout} className=" d-flex align-items-center gap-1">
+            <i class="ri-logout-circle-line"></i> Logout
+          </Link>
+        </div>
+        </Col>
+        :
+        <Col lg="6" md="6" sm="6">
+          <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
+            <Link to='/login' >
+            <i class="ri-login-circle-line"></i> Login
+          </Link>
+          <Link to="/signup" className=" d-flex align-items-center gap-1">
+            <i class="ri-user-line"></i> SignUp
+          </Link>
+          </div>
+        </Col>
       }
+
           </Row>
         </Container>
       </div>

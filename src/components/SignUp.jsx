@@ -5,9 +5,9 @@ import { useState , useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from "../context/AuthContext";
 
-const Login = () => {
+const SignUp = () => {
     const {login, logout, logged} = useAuth();
-    const [action,setAction] = useState("Login");
+    const [action,setAction] = useState("Sign Up");
     const [form,setForm] = useState({
       name:'',
       email:'',
@@ -187,7 +187,7 @@ const Login = () => {
     );
   };
   
-  export default Login;
+  export default SignUp;
   
   const Page = styled.div `
     // background: linear-gradient( #2A00B7, #42006C);
