@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useAuth } from "../context/AuthContext"
 import Header from "./Header"
-// import Footer from "../Footer"
+import Footer from "../Footer"
 
 
 const Layout = () => {
@@ -13,8 +13,9 @@ const Layout = () => {
         
         <div>
           {/* <Routers /> */}
+          <h1>hi</h1>
         </div>
-        {/* <Footer /> */}
+        <Footer />
       </Fragment>
     );
   };
