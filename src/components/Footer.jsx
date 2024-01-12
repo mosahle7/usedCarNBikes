@@ -2,7 +2,7 @@ import React from "react";
 
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 import { Link } from "react-router-dom";
-import "../../styles/footer.css";
+// import "../styles/footer.css";
 
 const quickLinks = [
   {
