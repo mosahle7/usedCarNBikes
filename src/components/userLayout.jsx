@@ -1,9 +1,10 @@
 import React, { Fragment } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Outlet, Link, NavLink } from "react-router-dom";
 import { useAuth } from "../context/AuthContext"
 import Header from "./Header"
 import Footer from "./Footer"
-
+import styled from "styled-components"
+import Routers from "../routers/UserRouters";
 
 const Layout = () => {
   
@@ -11,13 +12,20 @@ const Layout = () => {
       <Fragment>
         <Header />
         
-        <div>
-          {/* <Routers /> */}
-          <h1>hi</h1>
-        </div>
+        <main>
+          <Outlet></Outlet>
+        </main>
+
         <Footer />
       </Fragment>
     );
   };
   
+//   const MainContent = styled.main`
+//   // margin-top: 0; /* Remove any top margin */
+// `;
+
   export default Layout;
+
+
+

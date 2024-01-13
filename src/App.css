@@ -4,7 +4,7 @@
  :root { 
   --primary-color: #181b3a;
   --secondary-color: #01d293;
-  --body-bg: #0b0c28;
+  /* --body-bg: #0b0c28; */
   /* --body-bg: #fff; */
   --card-01-bg: linear-gradient(#ef621c, #e1424e);
   --card-02-bg: linear-gradient(#01d293, #56c57a);
@@ -17,6 +17,9 @@
   --recommend-car03-bg: #f4e3e5;
 }
 
+#io{
+  color: black;
+}
 * {
   padding: 0;
   margin: 0;

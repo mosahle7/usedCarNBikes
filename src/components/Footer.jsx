@@ -2,7 +2,7 @@ import React from "react";
 
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 import { Link } from "react-router-dom";
-// import "../styles/footer.css";
+import "../styles/footer.css";
 
 const quickLinks = [
   {
@@ -44,7 +44,7 @@ const Footer = () => {
           <Col lg="4" md="4" sm="12">
             <div className="logo footer__logo">
               <h1>
-                <Link to="/home" className=" d-flex align-items-center gap-2">
+                <Link to="/" className=" d-flex align-items-center gap-2">
                   <i class="ri-car-line"></i>
                   <span>
                     Rent Car <br /> Service

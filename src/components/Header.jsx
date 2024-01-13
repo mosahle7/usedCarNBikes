@@ -7,7 +7,7 @@ import "../styles/header.css";
 
 const navLinks = [
   {
-    path: "/user/home",
+    path: "/",
     display: "Home",
   },
   {
@@ -100,10 +100,10 @@ const Header = () => {
             <Col lg="4" md="3" sm="4">
               <div className="logo">
                 <h1>
-                  <Link to="/home" className="header_logo d-flex align-items-center gap-2">
+                  <Link to="/" className="header_logo d-flex align-items-center gap-2">
                     <i class="ri-car-line"></i>
                     <span>
-                      Used Cars <br /> &Bikes
+                      Used Cars <br /> & Bikes
                     </span>
                   </Link>
                 </h1>
