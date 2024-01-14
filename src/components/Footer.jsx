@@ -47,7 +47,7 @@ const Footer = () => {
                 <Link to="/" className=" d-flex align-items-center gap-2">
                   <i class="ri-car-line"></i>
                   <span>
-                    Rent Car <br /> Service
+                    Used Cars <br /> &Bikes
                   </span>
                 </Link>
               </h1>
@@ -79,7 +79,7 @@ const Footer = () => {
               <p className="office__info">NIT Calicut, Kerala, India</p>
               <p className="office__info">Phone: +911234567890</p>
 
-              <p className="office__info">Email: car_rental_service@gmail.com</p>
+              <p className="office__info">Email: used_car&bike@gmail.com</p>
 
               <p className="office__info">Office Time: 9am - 6pm</p>
             </div>
@@ -102,7 +102,7 @@ const Footer = () => {
             <div className="footer__bottom">
               <p className="section__description d-flex align-items-center justify-content-center gap-1 pt-4">
                 <i class="ri-copyright-line"></i>Copyright {year}, Developed by
-                CRMS team. All rights reserved.
+                UCAB team. All rights reserved.
               </p>
             </div>
           </Col>
