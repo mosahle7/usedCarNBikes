@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import { Container } from 'reactstrap';
 import { styled } from 'styled-components';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const HSlider = () => {
-    console.log('Rendering HSlider')
     const settings = {
         fade: true,
         speed: 2000,

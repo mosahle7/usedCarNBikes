@@ -4,11 +4,13 @@ import Slider from "react-slick";
 import { Container } from 'reactstrap';
 import {styled} from 'styled-components';
 import HSlider from '../components/Home/HSlider';
+import AboutSection from '../components/Home/AboutSection';
 const Home = () => {
     console.log('Rendering home');
   return (
     <>
       <HSlider />
+      <AboutSection />
     </>
 
   );
