@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { useState } from 'react';
+// import { useState } from 'react';
 import { Container, Row, Col } from "reactstrap";
 import { Link, NavLink } from "react-router-dom";
 import { useAuth } from "../context/AuthContext"
@@ -11,7 +11,7 @@ const navLinks = [
     display: "Home",
   },
   {
-    path: "/user/about",
+    path: "/about",
     display: "About",
   },
   {
@@ -19,7 +19,7 @@ const navLinks = [
     display: "Bikes",
   },
   {
-    path: "/user/cars",
+    path: "/cars",
     display: "Cars",
   },
 
