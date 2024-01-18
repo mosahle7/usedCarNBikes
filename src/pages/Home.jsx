@@ -5,12 +5,14 @@ import { Container } from 'reactstrap';
 import {styled} from 'styled-components';
 import HSlider from '../components/Home/HSlider';
 import AboutSection from '../components/Home/AboutSection';
+import WHY from '../components/Home/WHY';
 const Home = () => {
     console.log('Rendering home');
   return (
     <>
       <HSlider />
       <AboutSection />
+      <WHY/>
     </>
 
   );
