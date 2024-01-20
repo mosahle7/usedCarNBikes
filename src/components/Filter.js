@@ -34,7 +34,7 @@ const Filter = () => {
                 <SelectItem value="socks">Socks</SelectItem>
               </SelectContent>
             </Select>
-            <div className="text-sm text-gray-300">Selected: Shoes</div>
+            {/* <div className="text-sm text-gray-300">Selected: Shoes</div> */}
           </div>
           <div className="grid gap-2">
             <Label className="text-sm" htmlFor="price">
@@ -49,7 +49,7 @@ const Filter = () => {
                 <SelectItem value="high">High to Low</SelectItem>
               </SelectContent>
             </Select>
-            <div className="text-sm text-gray-300">Selected: Low to High</div>
+            {/* <div className="text-sm text-gray-300">Selected: Low to High</div> */}
           </div>
           <div className="grid gap-2">
             <Label className="text-sm" htmlFor="brand">
@@ -67,7 +67,7 @@ const Filter = () => {
                 <SelectItem value="under-armour">Under Armour</SelectItem>
               </SelectContent>
             </Select>
-            <div className="text-sm text-gray-300">Selected: Nike</div>
+            {/* <div className="text-sm text-gray-300">Selected: Nike</div> */}
           </div>
           <div className="grid gap-2">
             <Label className="text-sm" htmlFor="rating">
@@ -85,7 +85,7 @@ const Filter = () => {
                 <SelectItem value="1">1 stars and up</SelectItem>
               </SelectContent>
             </Select>
-            <div className="text-sm text-gray-300">Selected: 5 stars and up</div>
+            {/* <div className="text-sm text-gray-300">Selected: 5 stars and up</div> */}
           </div>
           <div className="grid gap-2">
             <Label className="text-sm" htmlFor="color">
@@ -103,7 +103,7 @@ const Filter = () => {
                 <SelectItem value="white">White</SelectItem>
               </SelectContent>
             </Select>
-            <div className="text-sm text-gray-300">Selected: Red</div>
+            {/* <div className="text-sm text-gray-300">Selected: Red</div> */}
           </div>
           <div className="grid gap-2">
             <Label className="text-sm" htmlFor="size">
@@ -120,7 +120,7 @@ const Filter = () => {
                 <SelectItem value="xl">Extra Large</SelectItem>
               </SelectContent>
             </Select>
-            <div className="text-sm text-gray-300">Selected: Medium</div>
+            {/* <div className="text-sm text-gray-300">Selected: Medium</div> */}
           </div>
           <div className="grid gap-2">
             <Label className="text-sm" htmlFor="availability">
@@ -135,7 +135,7 @@ const Filter = () => {
                 <SelectItem value="out-of-stock">Out of Stock</SelectItem>
               </SelectContent>
             </Select>
-            <div className="text-sm text-gray-300">Selected: In Stock</div>
+            {/* <div className="text-sm text-gray-300">Selected: In Stock</div> */}
           </div>
           <div className="grid gap-2">
             <Label className="text-sm" htmlFor="material">
@@ -152,7 +152,7 @@ const Filter = () => {
                 <SelectItem value="wool">Wool</SelectItem>
               </SelectContent>
             </Select>
-            <div className="text-sm text-gray-300">Selected: Cotton</div>
+            {/* <div className="text-sm text-gray-300">Selected: Cotton</div> */}
           </div>
         </div>
         <Button className="self-end">Reset Filters</Button>
