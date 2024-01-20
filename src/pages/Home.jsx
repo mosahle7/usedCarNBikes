@@ -6,6 +6,8 @@ import {styled} from 'styled-components';
 import HSlider from '../components/Home/HSlider';
 import AboutSection from '../components/Home/AboutSection';
 import WHY from '../components/Home/WHY';
+import Filter from '../components/Filter';
+
 const Home = () => {
     console.log('Rendering home');
   return (
@@ -13,6 +15,7 @@ const Home = () => {
       <HSlider />
       <AboutSection />
       <WHY/>
+      <Filter/>
     </>
 
   );
