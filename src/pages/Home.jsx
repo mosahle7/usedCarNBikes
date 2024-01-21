@@ -7,13 +7,14 @@ import HSlider from '../components/Home/HSlider';
 import AboutSection from '../components/Home/AboutSection';
 import WHY from '../components/Home/WHY';
 import Filter from '../components/Filter';
+// import 'output.css'
 
 const Home = () => {
     console.log('Rendering home');
   return (
     <>
       <HSlider />
-      <AboutSection />
+      {/* <AboutSection /> */}
       <WHY/>
       <Filter/>
     </>

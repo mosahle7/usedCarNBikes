@@ -12,7 +12,7 @@ const WHY = () => {
                 <Container>
                     <Row>
                         <Col lg="4" md="4" className='mb-2 text-center'>
-                        <img src="/assets/item1.svg" alt="A descriptive text about the image" width="100" height="100"/>
+                        <Iimg src="/assets/item1.svg" alt="A descriptive text about the image"/>
                             <ITitle>Transparent pricing</ITitle>
                             <ItemCont>
                             No surprises here. See how much you'll pay on cars you like.
@@ -20,7 +20,7 @@ const WHY = () => {
                         </Col>
 
                         <Col lg="4" md="4" className='text-center'>
-                        <img src="/assets/item2.svg" alt="A descriptive text about the image" width="100" height="100"/>
+                        <Iimg src="/assets/item2.svg" alt="A descriptive text about the image"/>
                             <ITitle>Minutes, not hours</ITitle>
                             <ItemCont>
                             No surprises here. See how much you'll pay on cars you like.
@@ -28,7 +28,7 @@ const WHY = () => {
                         </Col>
 
                         <Col lg="4" md="4" className='text-center'>
-                        <img src="/assets/item3.svg" alt="A descriptive text about the image" width="100" height="100"/>
+                        <Iimg src="/assets/item3.svg" alt="A descriptive text about the image"/>
                             <ITitle>Shop your way</ITitle>
                             <ItemCont>
                             No surprises here. See how much you'll pay on cars you like.
@@ -46,17 +46,22 @@ const WHY = () => {
 
 export default WHY;
 const Title = styled.h2`
-// background: black;
-font-weight: 600;
+    font-weight: 600 !important;
 `
 const Content = styled.div`
-width: 100%;
-background: black;
-color: white;
+width: 100% !important;
+background: black !important;
+color: white !important;
 `
 const ITitle = styled.h4`
-font-weight: 500;
+font-weight: 500 !important;;
 `
 const ItemCont = styled.div`
 
 `
+const Iimg = styled.img`
+&&& {
+    width: 100px;
+    height: 100px;
+  }
+`;
