@@ -1,12 +1,19 @@
 .car__item {
-    border: 1px solid #7c8a9736;
+    border: 2px solid #7c8a9736;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 25px;
+    background: #d6d6d6;
+    /* #000d6b */
+    /* #3591b3 */
   }
   
   .car__item-info span i {
     color: #f9a826;
     font-size: 1.1rem;
+  }
+
+  .car__item-info .gap-1 {
+    margin-right: 0px; /* Adjust this value to reduce or increase the spacing */
   }
   
   .car__item-btn {
