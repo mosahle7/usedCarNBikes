@@ -6,10 +6,11 @@ import { Button } from "./ui/button"
 import { Label } from "./ui/label"
 import { SelectValue, SelectTrigger, SelectItem, SelectContent, Select } from "./ui/select";
 import ".././output.css";
+import "../styles/filter.css"
 
 const Filter = () => {
   return (
-    <div className="p-4 bg-black text-white shadow-md rounded-md">
+    <div className="p-4 text-white shadow-md rounded-md search-filter">
       <div className="flex flex-col gap-4">
         <div className="flex gap-4">
           <h2 className="font-semibold text-lg">Filters</h2>
@@ -156,7 +157,7 @@ const Filter = () => {
             {/* <div className="text-sm text-gray-300">Selected: Cotton</div> */}
           </div>
         </div>
-        <Button className="self-end">Reset Filters</Button>
+        <Button className="self-end">Search</Button>
       </div>
     </div>
   )

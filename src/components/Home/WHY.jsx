@@ -50,7 +50,7 @@ const Title = styled.h2`
 `
 const Content = styled.div`
 width: 100% !important;
-background: black !important;
+background: rgb(10, 33, 65) !important;
 color: white !important;
 `
 const ITitle = styled.h4`

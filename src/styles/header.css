@@ -1,9 +1,11 @@
 .header__top {
     padding: 10px 0px;
-    background: #000d6b;
+    background: rgb(10, 33, 65);
     color: #fff;
   }
-  
+  /* rgb(10, 33, 65) */
+  /* #000d6b */
+
   .header__top__left {
     display: flex;
     align-items: center;
@@ -22,7 +24,7 @@
   
   .header__top__help i {
     background: #fff;
-    color: #000d6b;
+    color: rgb(10, 33, 65);
     padding: 2px 4px;
     border-radius: 50px;
     font-size: 0.7rem;
@@ -54,7 +56,7 @@
   
   .logo h1 a {
     text-decoration: none;
-    color: #000d6b;
+    color: rgb(10, 33, 65);
     font-weight: 700;
   }
   
@@ -64,13 +66,13 @@
   
   .header__location span i {
     font-size: 2.2rem;
-    color: #000d6b;
+    color: rgb(10, 33, 65);
   }
   
   .header__location-content h4 {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #000d6b;
+    color: rgb(10, 33, 65);
   }
   
   .header__location-content h6 {
@@ -78,7 +80,7 @@
   }
   
   .header__btn {
-    background: #000d6b !important;
+    background: rgb(10, 33, 65) !important;
     padding: 10px 20px;
     border: none;
     outline: none;
@@ -103,7 +105,7 @@
   
   .main__navbar {
     padding: 15px 0px;
-    background: #000d6b;
+    background: rgb(10, 33, 65);
   }
   
   .mobile__menu i {
@@ -133,19 +135,19 @@
   }
   
   .search__box {
-    border: 1px solid #7c8a972f;
+    border: 1px solid #7992aa2f;
     padding: 7px 12px;
     display: flex;
     align-items: center;
     border-radius: 50px;
-    background: #020a4de9;
+    background: rgb(23, 46, 79);
   }
-  
+  /* #020a4de9 */
   .search__box input {
     background: transparent;
     border: none;
     outline: none;
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
   }
   
@@ -153,7 +155,7 @@
     font-size: 0.8rem;
   }
   .search__box span i {
-    color: rgba(255, 255, 255, 0.555);
+    color: rgba(254, 254, 254, 0.555);
     cursor: pointer;
   }
   
@@ -194,7 +196,7 @@
     }
   
     .menu a {
-      color: #000d6b;
+      color: rgb(10, 33, 65);
       font-weight: 600;
       font-size: 0.9rem;
     }
