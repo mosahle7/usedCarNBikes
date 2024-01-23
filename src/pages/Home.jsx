@@ -4,6 +4,8 @@ import Slider from "react-slick";
 import { Container } from 'reactstrap';
 import {styled} from 'styled-components';
 import HSlider from '../components/Home/HSlider';
+
+
 const Home = () => {
     console.log('Rendering home');
   return (
