@@ -7,6 +7,7 @@ import HSlider from '../components/Home/HSlider';
 import AboutSection from '../components/Home/AboutSection';
 import WHY from '../components/Home/WHY';
 import Filter from '../components/Filter';
+import CarLogos from '../components/UI/CarLogos';
 // import 'output.css'
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
       {/* <AboutSection /> */}
       <WHY/>
       <Filter/>
+      <CarLogos/>
     </>
 
   );

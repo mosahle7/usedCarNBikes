@@ -4,6 +4,7 @@ import { Container, Row, Col } from "reactstrap";
 import { Link, NavLink } from "react-router-dom";
 import { useAuth } from "../context/AuthContext"
 import "../styles/header.css";
+import logo from "../Assets/all-images/Second Gear Logo.png";
 
 const navLinks = [
   {
@@ -103,8 +104,9 @@ const Header = () => {
                   <Link to="/" className="header_logo d-flex align-items-center gap-2">
                     <i class="ri-car-line"></i>
                     <span>
-                      Used Cars <br /> & Bikes
+                      Second <br /> Gear
                     </span>
+                    {/* <img className="company-logo" src={logo}></img> */}
                   </Link>
                 </h1>
               </div>
