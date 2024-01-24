@@ -79,12 +79,12 @@ const Filter = () => {
               <SelectTrigger>
                 <SelectValue placeholder="Select" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem className="text-white" value="5">5 stars and up</SelectItem>
-                <SelectItem className="text-white" value="4">4 stars and up</SelectItem>
-                <SelectItem className="text-white" value="3">3 stars and up</SelectItem>
-                <SelectItem className="text-white" value="2">2 stars and up</SelectItem>
-                <SelectItem className="text-white" value="1">1 stars and up</SelectItem>
+              <SelectContent className="bg-white">
+                <SelectItem className="text-black" value="5">5 stars and up</SelectItem>
+                <SelectItem className="text-black" value="4">4 stars and up</SelectItem>
+                <SelectItem className="text-black" value="3">3 stars and up</SelectItem>
+                <SelectItem className="text-black" value="2">2 stars and up</SelectItem>
+                <SelectItem className="text-black" value="1">1 stars and up</SelectItem>
               </SelectContent>
             </Select>
             {/* <div className="text-sm text-gray-300">Selected: 5 stars and up</div> */}
@@ -97,12 +97,12 @@ const Filter = () => {
               <SelectTrigger>
                 <SelectValue placeholder="Select" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem className="text-white" value="red">Red</SelectItem>
-                <SelectItem className="text-white" value="blue">Blue</SelectItem>
-                <SelectItem className="text-white" value="green">Green</SelectItem>
-                <SelectItem className="text-white" value="black">Black</SelectItem>
-                <SelectItem className="text-white" value="white">White</SelectItem>
+              <SelectContent className="bg-white">
+                <SelectItem className="text-black" value="red">Red</SelectItem>
+                <SelectItem className="text-black" value="blue">Blue</SelectItem>
+                <SelectItem className="text-black" value="green">Green</SelectItem>
+                <SelectItem className="text-black" value="black">Black</SelectItem>
+                <SelectItem className="text-black" value="white">White</SelectItem>
               </SelectContent>
             </Select>
             {/* <div className="text-sm text-gray-300">Selected: Red</div> */}
@@ -115,11 +115,11 @@ const Filter = () => {
               <SelectTrigger>
                 <SelectValue placeholder="Select" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem className="text-white" value="s">Small</SelectItem>
-                <SelectItem className="text-white" value="m">Medium</SelectItem>
-                <SelectItem className="text-white" value="l">Large</SelectItem>
-                <SelectItem className="text-white" value="xl">Extra Large</SelectItem>
+              <SelectContent className="bg-white">
+                <SelectItem className="text-black" value="s">Small</SelectItem>
+                <SelectItem className="text-black" value="m">Medium</SelectItem>
+                <SelectItem className="text-black" value="l">Large</SelectItem>
+                <SelectItem className="text-black" value="xl">Extra Large</SelectItem>
               </SelectContent>
             </Select>
             {/* <div className="text-sm text-gray-300">Selected: Medium</div> */}
@@ -132,9 +132,9 @@ const Filter = () => {
               <SelectTrigger>
                 <SelectValue placeholder="Select" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem className="text-white" value="in-stock">In Stock</SelectItem>
-                <SelectItem className="text-white"value="out-of-stock">Out of Stock</SelectItem>
+              <SelectContent className="bg-white">
+                <SelectItem className="text-black" value="in-stock">In Stock</SelectItem>
+                <SelectItem className="text-black"value="out-of-stock">Out of Stock</SelectItem>
               </SelectContent>
             </Select>
             {/* <div className="text-sm text-gray-300">Selected: In Stock</div> */}
@@ -147,11 +147,11 @@ const Filter = () => {
               <SelectTrigger>
                 <SelectValue placeholder="Select" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem className="text-white" value="cotton">Cotton</SelectItem>
-                <SelectItem className="text-white" value="polyester">Polyester</SelectItem>
-                <SelectItem className="text-white"value="leather">Leather</SelectItem>
-                <SelectItem className="text-white" value="wool">Wool</SelectItem>
+              <SelectContent className="bg-white">
+                <SelectItem className="text-black" value="cotton">Cotton</SelectItem>
+                <SelectItem className="text-black" value="polyester">Polyester</SelectItem>
+                <SelectItem className="text-black"value="leather">Leather</SelectItem>
+                <SelectItem className="text-black" value="wool">Wool</SelectItem>
               </SelectContent>
             </Select>
             {/* <div className="text-sm text-gray-300">Selected: Cotton</div> */}
