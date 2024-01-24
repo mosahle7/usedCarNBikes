@@ -7,8 +7,43 @@ import { Label } from "./ui/label"
 import { SelectValue, SelectTrigger, SelectItem, SelectContent, Select } from "./ui/select";
 import ".././output.css";
 import "../styles/filter.css"
+import { useState } from "react";
 
 const Filter = () => {
+  const [selectedFilters, setSelectedFilters] = useState({
+    make: '',
+    model: '',
+    year: '',
+    price: '',
+    mileage: '',
+    transmission: '',
+    fuelType: '',
+    color: '',
+  });
+
+  const handleFilterChange = (filterName, value) => {
+    setSelectedFilters((prevFilters) => ({
+      ...prevFilters,
+      [filterName]: value,
+    }));
+    console.log('yo');
+    debugger;
+  };
+
+  const handleResetFilters = () => {
+    setSelectedFilters({
+      make: '',
+      model: '',
+      year: '',
+      price: '',
+      mileage: '',
+      transmission: '',
+      fuelType: '',
+      color: '',
+    })
+    console.log(`${selectedFilters}`);
+    debugger;
+  }
   return (
     <div className="p-4 text-white shadow-md rounded-md search-filter">
       <div className="flex flex-col gap-4">
@@ -20,24 +55,89 @@ const Filter = () => {
           </Button>
         </div>
         <div className="grid grid-cols-2 gap-4">
-          <div className="grid gap-2">
-            <Label className="text-sm" htmlFor="category">
-              Category
+          {/* <div className="grid gap-2">
+            <Label className="text-sm" htmlFor="make">
+              Make
             </Label>
-            <Select className="w-full" id="category">
+            <Select className="w-full" id="make">
               <SelectTrigger>
                 <SelectValue placeholder="Select" />
               </SelectTrigger>
               <SelectContent className="bg-white">
-                <SelectItem value="shoes" className="text-black">Shoes</SelectItem>
-                <SelectItem value="tops"  className="text-black">Tops & T-Shirts</SelectItem>
-                <SelectItem value="hoodies"  className="text-black">Hoodies & Pullovers</SelectItem>
-                <SelectItem value="tracksuits" className="text-black">Tracksuits</SelectItem>
-                <SelectItem value="socks" className="text-black">Socks</SelectItem>
+              <SelectItem value="toyota" className="text-black" onClick={() => handleFilterChange('make','Toyota')}>Toyota</SelectItem>
+              <SelectItem value="ford" className="text-black">Ford</SelectItem>
+              <SelectItem value="honda" className="text-black">Honda</SelectItem>
+              <SelectItem value="chevrolet" className="text-black">Chevrolet</SelectItem>
+              <SelectItem value="mercedes" className="text-black">Mercedes</SelectItem>
               </SelectContent>
             </Select>
-            {/* <div className="text-sm text-gray-300">Selected: Shoes</div> */}
-          </div>
+          </div> */}
+        <div className="grid gap-2">
+  <Label className="text-sm" htmlFor="make">
+    Make
+  </Label>
+  <Select className="w-full" id="make">
+    <SelectTrigger>
+      <SelectValue placeholder="Select" />
+    </SelectTrigger>
+    <SelectContent className="bg-white">
+      <SelectItem value="toyota" className="text-black" onClick={() => handleFilterChange("make", 'Toyota')}>
+        Toyota
+      </SelectItem>
+      <SelectItem value="ford" className="text-black" onClick={() => handleFilterChange('make', 'Ford')}>
+        Ford
+      </SelectItem>
+      <SelectItem value="honda" className="text-black" onClick={() => handleFilterChange('make', 'Honda')}>
+        Honda
+      </SelectItem>
+      <SelectItem value="chevrolet" className="text-black" onClick={() => handleFilterChange('make', 'Chevrolet')}>
+        Chevrolet
+      </SelectItem>
+      <SelectItem value="mercedes" className="text-black" onClick={() => handleFilterChange('make', 'Mercedes')}>
+        Mercedes
+      </SelectItem>
+    </SelectContent>
+  </Select>
+</div>
+
+
+        <div className="grid gap-2">
+          <Label className="text-sm" htmlFor="model">
+            Model
+          </Label>
+          <Select className="w-full" id="model">
+            <SelectTrigger>
+              <SelectValue placeholder="Select" />
+    </SelectTrigger>
+    <SelectContent className="bg-white">
+      <SelectItem className="text-black" value="sedan">Sedan</SelectItem>
+      <SelectItem className="text-black" value="suv">SUV</SelectItem>
+      <SelectItem className="text-black" value="truck">Truck</SelectItem>
+      <SelectItem className="text-black" value="coupe">Coupe</SelectItem>
+      <SelectItem className="text-black" value="convertible">Convertible</SelectItem>
+    </SelectContent>
+  </Select>
+  {/* <div className="text-sm text-gray-300">Selected: Sedan</div> */}
+</div>
+<div className="grid gap-2">
+  <Label className="text-sm" htmlFor="year">
+    Year
+  </Label>
+  <Select className="w-full" id="year">
+    <SelectTrigger>
+      <SelectValue placeholder="Select" />
+    </SelectTrigger>
+    <SelectContent className="bg-white">
+      <SelectItem className="text-black" value="2024">2024</SelectItem>
+      <SelectItem className="text-black" value="2023">2023</SelectItem>
+      <SelectItem className="text-black" value="2022">2022</SelectItem>
+      <SelectItem className="text-black" value="2021">2021</SelectItem>
+      <SelectItem className="text-black" value="2020">2020</SelectItem>
+    </SelectContent>
+  </Select>
+  {/* <div className="text-sm text-gray-300">Selected: 2024</div> */}
+</div>
+
           <div className="grid gap-2">
             <Label className="text-sm" htmlFor="price">
               Price
@@ -54,41 +154,53 @@ const Filter = () => {
             {/* <div className="text-sm text-gray-300">Selected: Low to High</div> */}
           </div>
           <div className="grid gap-2">
-            <Label className="text-sm" htmlFor="brand">
-              Brand
-            </Label>
-            <Select className="w-full" id="brand">
-              <SelectTrigger>
-                <SelectValue placeholder="Select" />
-              </SelectTrigger>
-              <SelectContent className="bg-white"> 
-                <SelectItem className="text-black" value="nike">Nike</SelectItem>
-                <SelectItem className="text-black" value="adidas">Adidas</SelectItem>
-                <SelectItem className="text-black" value="puma">Puma</SelectItem>
-                <SelectItem className="text-black" value="reebok">Reebok</SelectItem>
-                <SelectItem className="text-black" value="under-armour">Under Armour</SelectItem>
-              </SelectContent>
-            </Select>
-            {/* <div className="text-sm text-gray-300">Selected: Nike</div> */}
-          </div>
-          <div className="grid gap-2">
-            <Label className="text-sm" htmlFor="rating">
-              Rating
-            </Label>
-            <Select className="w-full" id="rating">
-              <SelectTrigger>
-                <SelectValue placeholder="Select" />
-              </SelectTrigger>
-              <SelectContent className="bg-white">
-                <SelectItem className="text-black" value="5">5 stars and up</SelectItem>
-                <SelectItem className="text-black" value="4">4 stars and up</SelectItem>
-                <SelectItem className="text-black" value="3">3 stars and up</SelectItem>
-                <SelectItem className="text-black" value="2">2 stars and up</SelectItem>
-                <SelectItem className="text-black" value="1">1 stars and up</SelectItem>
-              </SelectContent>
-            </Select>
-            {/* <div className="text-sm text-gray-300">Selected: 5 stars and up</div> */}
-          </div>
+  <Label className="text-sm" htmlFor="mileage">
+    Mileage
+  </Label>
+  <Select className="w-full" id="mileage">
+    <SelectTrigger>
+      <SelectValue placeholder="Select" />
+    </SelectTrigger>
+    <SelectContent className="bg-white">
+      <SelectItem className="text-black" value="low-to-high">Low to High</SelectItem>
+      <SelectItem className="text-black" value="high-to-low">High to Low</SelectItem>
+    </SelectContent>
+  </Select>
+  {/* <div className="text-sm text-gray-300">Selected: Low to High</div> */}
+</div>
+<div className="grid gap-2">
+  <Label className="text-sm" htmlFor="transmission">
+    Transmission
+  </Label>
+  <Select className="w-full" id="transmission">
+    <SelectTrigger>
+      <SelectValue placeholder="Select" />
+    </SelectTrigger>
+    <SelectContent className="bg-white">
+      <SelectItem className="text-black" value="automatic">Automatic</SelectItem>
+      <SelectItem className="text-black" value="manual">Manual</SelectItem>
+    </SelectContent>
+  </Select>
+  {/* <div className="text-sm text-gray-300">Selected: Automatic</div> */}
+</div>
+<div className="grid gap-2">
+  <Label className="text-sm" htmlFor="fuelType">
+    Fuel Type
+  </Label>
+  <Select className="w-full" id="fuelType">
+    <SelectTrigger>
+      <SelectValue placeholder="Select" />
+    </SelectTrigger>
+    <SelectContent className="bg-white">
+      <SelectItem className="text-black" value="gasoline">Gasoline</SelectItem>
+      <SelectItem className="text-black" value="diesel">Diesel</SelectItem>
+      <SelectItem className="text-black" value="electric">Electric</SelectItem>
+      <SelectItem className="text-black" value="hybrid">Hybrid</SelectItem>
+    </SelectContent>
+  </Select>
+  {/* <div className="text-sm text-gray-300">Selected: Gasoline</div> */}
+</div>
+
           <div className="grid gap-2">
             <Label className="text-sm" htmlFor="color">
               Color
@@ -107,57 +219,8 @@ const Filter = () => {
             </Select>
             {/* <div className="text-sm text-gray-300">Selected: Red</div> */}
           </div>
-          <div className="grid gap-2">
-            <Label className="text-sm" htmlFor="size">
-              Size
-            </Label>
-            <Select className="w-full" id="size">
-              <SelectTrigger>
-                <SelectValue placeholder="Select" />
-              </SelectTrigger>
-              <SelectContent className="bg-white">
-                <SelectItem className="text-black" value="s">Small</SelectItem>
-                <SelectItem className="text-black" value="m">Medium</SelectItem>
-                <SelectItem className="text-black" value="l">Large</SelectItem>
-                <SelectItem className="text-black" value="xl">Extra Large</SelectItem>
-              </SelectContent>
-            </Select>
-            {/* <div className="text-sm text-gray-300">Selected: Medium</div> */}
-          </div>
-          <div className="grid gap-2">
-            <Label className="text-sm" htmlFor="availability">
-              Availability
-            </Label>
-            <Select className="w-full" id="availability">
-              <SelectTrigger>
-                <SelectValue placeholder="Select" />
-              </SelectTrigger>
-              <SelectContent className="bg-white">
-                <SelectItem className="text-black" value="in-stock">In Stock</SelectItem>
-                <SelectItem className="text-black"value="out-of-stock">Out of Stock</SelectItem>
-              </SelectContent>
-            </Select>
-            {/* <div className="text-sm text-gray-300">Selected: In Stock</div> */}
-          </div>
-          <div className="grid gap-2">
-            <Label className="text-sm" htmlFor="material">
-              Material
-            </Label>
-            <Select className="w-full" id="material">
-              <SelectTrigger>
-                <SelectValue placeholder="Select" />
-              </SelectTrigger>
-              <SelectContent className="bg-white">
-                <SelectItem className="text-black" value="cotton">Cotton</SelectItem>
-                <SelectItem className="text-black" value="polyester">Polyester</SelectItem>
-                <SelectItem className="text-black"value="leather">Leather</SelectItem>
-                <SelectItem className="text-black" value="wool">Wool</SelectItem>
-              </SelectContent>
-            </Select>
-            {/* <div className="text-sm text-gray-300">Selected: Cotton</div> */}
-          </div>
         </div>
-        <Button className="self-end">Search</Button>
+        <Button className="self-end" onClick={handleResetFilters}>Reset Filters</Button>
       </div>
     </div>
   )
