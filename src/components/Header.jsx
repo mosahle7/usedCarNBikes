@@ -29,7 +29,7 @@ const navLinks = [
     display: "Blog",
   },
   {
-    path: "/user/contact",
+    path: "/contact",
     display: "Contact",
   },
 ];
