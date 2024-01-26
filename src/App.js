@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import { AuthContextProvider } from "./context/AuthContext";
 import CarListing from "./pages/cars";
+import About from "./pages/About";
 
 import './App.css';
 
@@ -30,7 +31,7 @@ const App = () => {
         }>
           <Route index element = {<Home/>}/>
           <Route path="/cars" element= {<CarListing/>} />
-
+          <Route path="/about" element={<About />}/>
 
         {/* <Route path="/user/" element={<Layout />} /> */}
       </Route>
