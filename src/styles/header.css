@@ -42,8 +42,13 @@
   
   /* ============ header middle style =========== */
 
-  /* .company-logo {
-    width: 150px;
+  .company-logo {
+    /* size: 500px; */
+    /* height: 30px; */
+  }
+
+  /* .company-logo img {
+    height: 30px;
   } */
   
   .header__middle {

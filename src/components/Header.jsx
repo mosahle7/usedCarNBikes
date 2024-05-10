@@ -2,9 +2,11 @@ import React, { useRef } from "react";
 // import { useState } from 'react';
 import { Container, Row, Col } from "reactstrap";
 import { Link, NavLink } from "react-router-dom";
-import { useAuth } from "../context/AuthContext"
+import { useAuth } from "../context/AuthContext";
 import "../styles/header.css";
-import logo from "../Assets/all-images/Second Gear Logo.png";
+import secondgear from "../Assets/all-images/Second Gear (5).png";
+// import secondgear from "../Assets/all-images/Second_Gear-removebg-preview.png"
+import logo from "../Assets/all-images/logo.png";
 
 const navLinks = [
   {
@@ -16,7 +18,7 @@ const navLinks = [
     display: "About",
   },
   {
-    path: "/user/bikes",
+    path: "/bikes",
     display: "Bikes",
   },
   {
@@ -25,8 +27,8 @@ const navLinks = [
   },
 
   {
-    path: "/user/blogs",
-    display: "Blog",
+    path: "/wishlist",
+    display: "wishlist",
   },
   {
     path: "/user/contact",
@@ -38,7 +40,7 @@ const navLinks = [
 
 const Header = () => {
   const menuRef = useRef(null);
-  const {logged, logout} = useAuth();
+  const { logged, logout } = useAuth();
 
   const toggleMenu = () => menuRef.current.classList.toggle("menu__active");
 
@@ -56,7 +58,7 @@ const Header = () => {
                 </span>
               </div>
             </Col>
-   
+
             {/* <Col lg="6" md="6" sm="6">
               <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
                 <Link to="/login" className=" d-flex align-items-center gap-1">
@@ -68,28 +70,34 @@ const Header = () => {
                 </Link>
               </div>
             </Col> */}
-            
-      {logged? 
-        <Col lg="6" md="6" sm="6">
-        <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
-          <Link to="/login" onClick={logout} className=" d-flex align-items-center gap-1">
-            <i class="ri-logout-circle-line"></i> Logout
-          </Link>
-        </div>
-        </Col>
-        :
-        <Col lg="6" md="6" sm="6">
-          <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
-            <Link to='/login' >
-            <i class="ri-login-circle-line"></i> Login
-          </Link>
-          <Link to="/signup" className=" d-flex align-items-center gap-1">
-            <i class="ri-user-line"></i> SignUp
-          </Link>
-          </div>
-        </Col>
-      }
 
+            {logged ? (
+              <Col lg="6" md="6" sm="6">
+                <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
+                  <Link
+                    to="/login"
+                    onClick={logout}
+                    className=" d-flex align-items-center gap-1"
+                  >
+                    <i class="ri-logout-circle-line"></i> Logout
+                  </Link>
+                </div>
+              </Col>
+            ) : (
+              <Col lg="6" md="6" sm="6">
+                <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
+                  <Link to="/login">
+                    <i class="ri-login-circle-line"></i> Login
+                  </Link>
+                  <Link
+                    to="/signup"
+                    className=" d-flex align-items-center gap-1"
+                  >
+                    <i class="ri-user-line"></i> SignUp
+                  </Link>
+                </div>
+              </Col>
+            )}
           </Row>
         </Container>
       </div>
@@ -101,12 +109,15 @@ const Header = () => {
             <Col lg="4" md="3" sm="4">
               <div className="logo">
                 <h1>
-                  <Link to="/" className="header_logo d-flex align-items-center gap-2">
-                    <i class="ri-car-line"></i>
-                    <span>
+                  <Link
+                    to="/"
+                    className="header_logo d-flex align-items-center gap-2"
+                  >
+                    {/* <i class="ri-car-line"></i> */}
+                    {/* <span>
                       Second <br /> Gear
-                    </span>
-                    {/* <img className="company-logo" src={logo}></img> */}
+                    </span> */}
+                    <img className="company-logo" src={secondgear}></img>
                   </Link>
                 </h1>
               </div>
@@ -179,7 +190,10 @@ const Header = () => {
 
             <div className="nav__right">
               <div className="search__box">
-                <input type="text" placeholder="Search for Cars or Bikes, Eg:XUV700" />
+                <input
+                  type="text"
+                  placeholder="Search for Cars or Bikes, Eg:XUV700"
+                />
                 <span>
                   <i class="ri-search-line"></i>
                 </span>

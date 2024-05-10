@@ -1,0 +1,71 @@
+/* Custom styles for the ImageSlider component */
+
+/* Container styling */
+.mt-4 {
+  max-width: 500px; /* Adjust the max-width based on your preference */
+  margin: 0px 20px;
+}
+
+/* Slider styling */
+.slick-slider {
+  border: 1px solid #ddd; /* Border color */
+}
+
+/* Slide styling */
+.slick-slide {
+  padding: 55px; /* Adjust padding based on your preference */
+}
+
+/* Custom arrow styling */
+.custom-arrow {
+  background-color: #393939; /* Arrow background color */
+  color: #ffffff; /* Arrow text color */
+  border-radius: 50%; /* Make the arrow circular */
+  /* padding: 10px; Adjust padding based on your preference */
+  position: absolute;
+  top: auto;
+  bottom: 20px; /*Adjust this value to set the distance from the bottom */
+  transform: translateY(-50%); /* Center vertically */
+  width: 70%; /* Set the width to 70% */
+  padding: 10px; /* Adjust padding based on your preference */
+}
+
+/* .carousel-control-prev {
+    color: #e81212;
+  } */
+
+.custom-prev {
+  left: 10px; /* Adjust left positioning based on your preference */
+}
+
+.custom-next {
+  right: 10px; /* Adjust right positioning based on your preference */
+}
+
+/* Dot styling */
+.slick-dots {
+  bottom: 10px; /* Adjust bottom spacing based on your preference */
+}
+
+.slick-dots li button {
+  font-size: 10px; /* Adjust dot size based on your preference */
+}
+
+/* Override default arrow styles (optional) */
+.slick-prev,
+.slick-next {
+  font-size: 40px; /* Hide default arrow text */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 24px; /* Set the font size of default arrows (adjust as needed) */
+  color: #333; /* Set the color of default arrows */
+}
+
+/* Responsive styles (optional) */
+@media screen and (max-width: 767px) {
+  .mt-4 {
+    max-width: 100%; /* Adjust the max-width for smaller screens */
+  }
+}

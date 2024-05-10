@@ -1,70 +1,49 @@
-/* Custom styles for the ImageSlider component */
+/* CarDetails.css */
 
-/* Container styling */
-.mt-4 {
-    max-width: 500px; /* Adjust the max-width based on your preference */
-    margin: 0px auto;
-  }
-  
-  /* Slider styling */
-  .slick-slider {
-    border: 1px solid #ddd; /* Border color */
-  }
-  
-  /* Slide styling */
-  .slick-slide {
-    padding: 55px; /* Adjust padding based on your preference */
-  }
-  
-  /* Custom arrow styling */
-  .custom-arrow {
-    background-color: #393939; /* Arrow background color */
-    color: #ffffff; /* Arrow text color */
-    border-radius: 50%; /* Make the arrow circular */
-    /* padding: 10px; Adjust padding based on your preference */
-    position: absolute;
-  top: auto;
-   bottom: 20px; /*Adjust this value to set the distance from the bottom */
-  transform: translateY(-50%); /* Center vertically */
-  width: 70%; /* Set the width to 70% */
-  padding: 10px; /* Adjust padding based on your preference */
-  }
+.car-details-container {
+  /* padding-left: 20px; */
+  padding: 20px;
+  display: block;
+}
+/* .paymentPage {
+  margin: 5px;
+  /* padding-right: 20px; */
+/* padding: 40px; */
+/* } */
+.slider-container {
+  /* display: flex; */
+  justify-content: center; /* Center the sliders horizontally */
+}
 
-  /* .carousel-control-prev {
-    color: #e81212;
-  } */
-  
-  .custom-prev {
-    left: 10px; /* Adjust left positioning based on your preference */
-  }
-  
-  .custom-next {
-    right: 10px; /* Adjust right positioning based on your preference */
-  }
-  
-  /* Dot styling */
-  .slick-dots {
-    bottom: 10px; /* Adjust bottom spacing based on your preference */
-  }
-  
-  .slick-dots li button {
-    font-size: 10px; /* Adjust dot size based on your preference */
-  }
-  
-  /* Override default arrow styles (optional) */
-  .slick-prev, .slick-next {
-    font-size: 40px; /* Hide default arrow text */
-  }
-  
-  .slick-prev:before, .slick-next:before {
-    font-size: 24px; /* Set the font size of default arrows (adjust as needed) */
-    color: #333; /* Set the color of default arrows */
-  }
-  
-  /* Responsive styles (optional) */
-  @media screen and (max-width: 767px) {
-    .mt-4 {
-      max-width: 100%; /* Adjust the max-width for smaller screens */
-    }
-  }
-  
+.slider-container table {
+  width: 100%; /* Ensure the table fills the container */
+  margin-left: 10px;
+}
+
+.slider-container tr {
+  width: 0%; /* Each slider takes up half of the container */
+  /* margin-left: 10px; */
+  padding: 0 0px; /* Add some padding between sliders */
+}
+.details {
+  position: relative; /* Required for absolute positioning of ::after */
+  text-decoration: none; /* Remove default underline */
+}
+
+/* Style the ::after pseudo-element for colored underline */
+.details::after {
+  content: "";
+  position: absolute;
+  bottom: 13px; /* Adjust the position of the underline as needed */
+  left: 0;
+  width: 11%;
+  border-bottom: 5px solid rgb(17, 17, 67); /*Change 'blue' to your desired color */
+}
+/* .car-detail-table {
+  background-color: rgb(10, 33, 65);
+} */
+table.table-bordered.car-detail-table {
+  border: 2px solid rgb(10, 33, 65); /* Change the border color to red */
+  background-color: #842a2a !important; /* Change the background color to light gray */
+  color: #362121; /* Change the text color to dark gray */
+}

@@ -1,14 +1,14 @@
 import React from "react";
-import ImageSlider from "../components/UI/ImageSlider";
+import BikeImageSlider from "../components/UI/BikeImageSlider";
 // import VideoPlayer from "../components/UI/VideoPlayer";
 import "../styles/CarDetails.css";
 
-const CarDetails = () => {
+const BikeDetails = () => {
   return (
     <div className="car-details-container">
       <div class="modal-body row">
         <div class="col-md-8">
-          <ImageSlider />
+          <BikeImageSlider />
         </div>
         <div class="col-md-2">
           {
@@ -150,4 +150,4 @@ const CarDetails = () => {
   );
 };
 
-export default CarDetails;
+export default BikeDetails;

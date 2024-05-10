@@ -10,7 +10,8 @@ import "../styles/filter.css"
 
 const Filter = () => {
   return (
-    <div className="p-4 text-white shadow-md rounded-md search-filter">
+    <div className="flex justify-center items-center h-screen">
+      <div className="p-4 text-white shadow-md rounded-md search-filter" style={{ width: '50%' }}>
       <div className="flex flex-col gap-4">
         <div className="flex gap-4">
           <h2 className="font-semibold text-lg">Filters</h2>
@@ -159,6 +160,7 @@ const Filter = () => {
         </div>
         <Button className="self-end">Search</Button>
       </div>
+    </div>
     </div>
   )
 }

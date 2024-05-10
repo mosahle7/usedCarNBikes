@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 // import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/commonsection";
-import CarItem from "../components/UI/CarItem";
-import carData from "../Assets/data/carData";
+import BikeItem from "../components/UI/BikeItem";
+import bikeData from "../Assets/data/bikeData";
 import Filter from "../components/Filter";
 import { useState } from "react";
 // import {MDBIcon} from "mdb-react-ui-kit"
@@ -16,7 +16,7 @@ import { useState } from "react";
 //   };
 //   props.onAddToWishlist(newItem);
 // };
-const CarListing = () => {
+const BikeListing = () => {
   const [wishlist, setWishlist] = useState([]);
 
   const handleAddToWishlist = (newItem) => {
@@ -26,7 +26,7 @@ const CarListing = () => {
   return (
     // <Helmet title="Cars">
     <>
-      <CommonSection title="Car Listing" />
+      <CommonSection title="Bike Listing" />
 
       <section>
         <Container>
@@ -60,8 +60,8 @@ const CarListing = () => {
               </div>
             </Col>
 
-            {carData.map((item) => (
-              <CarItem
+            {bikeData.map((item) => (
+              <BikeItem
                 item={item}
                 key={item.id}
                 onAddToWishlist={handleAddToWishlist}
@@ -74,4 +74,4 @@ const CarListing = () => {
   );
 };
 
-export default CarListing;
+export default BikeListing;
